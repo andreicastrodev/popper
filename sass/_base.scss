@@ -1,0 +1,150 @@
+// COLORS
+
+$color-primary:#f2efff;
+$color-primary-dark:#9191fb;
+$color-primary-dark-2: #4f4b72;
+
+
+$color-secondary: #ef84ae;
+$color-tertiary:#fbe6b2;
+
+$color-white: #ffffff;
+
+
+//font\
+$font-primary: 'Lato', sans-serif;
+
+
+
+// Media qUERY
+
+$bp-largest:75em; //1200 px
+$bp-large:62.5em; //1000px
+$bp-medium:50em; // 800px
+$bp-small:37.5em; // 600px
+$bp-smallest: 25em; // 400px
+
+
+// HELPER CLASSES
+
+.ml-small{margin-left: .5rem;}
+.mb-small{margin-bottom: 1rem;}
+.mb-small-2{margin-bottom: 1.3rem;}
+.mb-small-3{margin-bottom: 1.6rem;}
+
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+
+html{
+	box-sizing: border-box;
+	font-size: 62.5%; // 10px/16px  =62.5% = 1 rem = 10 px;
+
+	@media only screen and (max-width:  $bp-largest){
+		font-size: 50%;
+	}
+
+	@media only screen and (max-width:  $bp-smallest){
+		font-size: 40%;
+	}	
+}
+
+
+
+body{
+	background-color: $color-primary;
+	font-family: $font-primary;
+	font-weight: 300;
+	line-height: 1.6;
+}
+
+
+.container{
+	display: grid;
+	grid-template-rows: min-content 80vh  repeat(6, min-content);
+	grid-template-columns:[full-start] 1fr [center-start] repeat(8 ,[col-start] minmax(min-content, 14rem)[col-end]) [center-end] 1fr[full-end];
+
+	@media only screen and (max-width:  $bp-medium){
+	grid-template-rows: min-content 45vh min-content  repeat(6, min-content);
+	}
+
+	@media only screen and (max-width:  $bp-smallest){
+		grid-template-rows: repeat(9, min-content);
+	}		
+
+}
+
+.btn{
+
+	outline:none;
+	border:none;
+	border-radius: 3rem;
+	padding: 1rem 3rem;
+	background-color: $color-primary-dark-2;
+	color: $color-white;
+	cursor: pointer;
+	font-family: $font-primary;
+	font-weight: 700;
+	transition: all .2s;
+	&:hover{
+		transform: translateY(-3px);
+	}
+
+	&:active{
+		transform: translateY( 1px);
+
+	}
+
+}
+
+.btn-bl{
+
+
+	border: 1px solid $color-primary-dark-2;
+	border-radius: 3rem;
+	padding: 1rem 3rem;
+	color: $color-primary-dark-2;
+	background-color: $color-primary;
+	cursor: pointer;
+	font-family: $font-primary;
+	font-weight: 700;
+	transition: all .2s;
+	&:hover{
+		transform: translateY(-3px);
+	}
+
+	&:active{
+		transform: translateY( 1px);
+
+	}
+
+}
+
+
+.btn--white{
+
+
+	padding: 1rem 3rem;
+	color: $color-primary-dark-2;
+	outline:none;
+	border: none;
+	background-color: #ffff;
+	cursor: pointer;
+	font-family: $font-primary;
+	font-weight: 700;
+	transition: all .2s;
+	&:hover{
+		transform: translateY(-3px);
+	}
+
+	&:active{
+		transform: translateY( 1px);
+
+	}
+
+}

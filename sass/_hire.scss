@@ -1,0 +1,102 @@
+.hire{
+	grid-column: full-start / full-end;
+	display: flex;
+	background-color: #ffffff;
+	padding: 8rem;
+
+	@media only screen and (max-width:  $bp-medium){
+	flex-wrap: wrap;
+	}
+	&__left{
+		flex: 0 0 40%;
+		align-self: center;
+		justify-self: center;
+		padding: 5rem;
+
+	@media only screen and (max-width:  $bp-medium){
+		flex: 0 0 100%;
+
+	}
+
+	@media only screen and (max-width:  $bp-smallest){
+		padding: 3rem;
+	}
+	}
+
+
+	&__right{
+		flex: 0 0 60%;
+		padding: 4rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;	
+
+	@media only screen and (max-width:  $bp-medium){
+		flex: 0 0 100%;
+
+	}
+
+	@media only screen and (max-width:  $bp-smallest){
+		padding: 0;
+	}	
+	}
+
+	&__span{
+		font-size: 1.4rem;
+		font-weight: 400;
+	}
+
+
+	&__stars{
+		margin-left: -.5rem;
+		margin-top: 2rem;
+	}	
+
+	&__icon-star{
+		width: 2rem;
+		height: 2rem;
+		fill: #d4af37;
+	}
+
+
+	&__selector{
+		display: flex;
+		justify-content: space-between;
+		width: 20%;
+		margin-left: -.5rem;
+		margin-top: 2rem;
+		
+
+
+
+	}
+
+
+	&__btn{
+		font-size: 2rem;
+		font-weight:700;
+		background-color:#f2efff;
+		padding: .5rem 1.5rem;
+		border-radius: 50%;
+		border: 2px solid #4f4b72;
+		cursor: pointer;
+		transition: all .2s ease-in;
+
+	@media only screen and (max-width:  $bp-small){
+
+		&:not(:first-child){
+			margin-left: 2rem;
+		}
+
+	}
+
+	}
+
+	img{
+		width: 100%;
+		border-radius: 2rem;
+		display: block;
+		box-shadow:  0 2rem 1rem rgba(#000, .1);
+
+	}
+}

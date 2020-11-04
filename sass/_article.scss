@@ -1,0 +1,42 @@
+.article{
+	grid-column: full-start / full-end;
+	background-color: #ffff;
+	padding: 5rem;
+
+
+	&__content{
+	display:grid;
+	grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+	grid-gap: 2rem;
+	}
+
+
+	&__block{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+
+	}
+
+
+
+	&__text{
+		grid-row: 2 / -1;
+		grid-column: 2 / -1;
+		z-index: 100;
+		align-self: center;
+		justify-self: center;
+	}
+
+
+	&__img{
+		width: 100%;
+		display: block;
+		border-radius: 1rem;
+		filter: brightness(50%);
+		grid-column: 1 / -1;
+		grid-row: 1 / -1;
+
+
+	}
+}
